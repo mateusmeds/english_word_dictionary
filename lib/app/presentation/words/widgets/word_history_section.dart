@@ -1,6 +1,7 @@
 import 'package:english_word_dictionary/app/core/export.dart';
 import 'package:english_word_dictionary/app/presentation/words/cubit/states/word_history_state.dart';
 import 'package:english_word_dictionary/app/presentation/words/cubit/word_history_cubit.dart';
+import 'package:english_word_dictionary/app/presentation/words/widgets/default_empty_list.dart';
 import 'package:english_word_dictionary/app/presentation/words/widgets/tab_view_section.dart';
 import 'package:english_word_dictionary/app/shared/dependencies/export.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +28,13 @@ class _WordHistorySectionState extends State<WordHistorySection> {
     return BlocBuilder<WordHistoryCubit, WordHistoryState>(
       bloc: _wordHistoryCubit,
       builder: (context, state) {
-        return TabViewSection(
-          title: 'History',
-          words: state.words,
+        return Visibility(
+          visible: state.words.isNotEmpty,
+          replacement: const DefaultEmptyList(text: 'No history words'),
+          child: TabViewSection(
+            title: 'History',
+            words: state.words,
+          ),
         );
       },
     );
