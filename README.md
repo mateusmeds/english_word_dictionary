@@ -1,16 +1,27 @@
-# english_word_dictionary
+# English Word Dictionary
 
-A new Flutter project.
+Um projeto de dicionário em inglês.
 
-## Getting Started
+> This is a challenge by [Coodesh](https://coodesh.com/)
 
-This project is a starting point for a Flutter application.
+## Packages utilizados
 
-A few resources to get you started if this is your first Flutter project:
+- hive: ^2.2.3
+- cupertino_icons: ^1.0.6
+- hive_flutter: ^1.1.0
+- get_it: ^7.7.0
+- dio: ^5.4.3+1
+- result_dart: ^1.1.1
+- path_provider: ^2.1.3
+- flutter_dotenv: ^5.1.0
+- audioplayers: ^6.0.0
+- bloc: ^8.1.4
+- flutter_bloc: ^8.1.5
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Como utilizar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Faça o clone do projeto `git clone https://github.com/mateusmeds/english_word_dictionary.git`
+2. Digite o comando `flutter pub get` para atualizar as depedências do projeto
+3. Copie o arquivo .env.example e renomeie para .env
+4. Preencha `API_BASE_URL=https://api.dictionaryapi.dev/api/v2/entries/en`
+3. Flutter SDK Version: 3.19.0

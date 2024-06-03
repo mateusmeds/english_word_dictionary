@@ -17,7 +17,7 @@ class PreviousNextButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: ElevatedButton(
+          child: TextButton(
             onPressed: _previousWordIndex != -1
                 ? () {
                     Navigator.pushReplacement(
@@ -38,7 +38,7 @@ class PreviousNextButtons extends StatelessWidget {
         ),
         const SizedBox(width: 30),
         Expanded(
-          child: ElevatedButton(
+          child: TextButton(
             onPressed: _nextWordIndex != -1
                 ? () {
                     Navigator.pushReplacement(

@@ -21,11 +21,7 @@ class WordsPage extends StatelessWidget {
           ),
         ),
         body: Container(
-          padding: const EdgeInsets.only(
-            top: 15,
-            left: 15,
-            right: 15,
-          ),
+          margin: const EdgeInsets.all(15),
           child: const TabBarView(
             children: [
               WordsSection(),
